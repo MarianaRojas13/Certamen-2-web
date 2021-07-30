@@ -15,7 +15,13 @@ class CrearTablaLecturas extends Migration
     {
         Schema::create('lecturas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->date("fecha");
+            $table->string("hora",5);
+            $table->integer("medidor");
+            $table->string("direccion",60);
+            $table->integer("valor");
+            $table->string("tipo_medida",15);
+            $table->timessansaquinta_dbtamps();
         });
     }
 

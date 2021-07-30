@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
                 <select class="form-select" id="filtro-cbx">
-                    <option value="todos">Todos</option>
+                    <option value="todas">Todas</option>
                 </select>
             </div>
         </div>
@@ -36,5 +36,6 @@
 @endsection
 
 @section('javascript')
+    <script src="{{asset('js/servicios/medidasService.js')}}"></script>
     <script src="{{asset('js/mediciones_existentes.js')}}"></script>
 @endsection

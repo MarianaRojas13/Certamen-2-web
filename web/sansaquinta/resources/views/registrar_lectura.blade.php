@@ -41,9 +41,6 @@
                 <div class="mb-3">
                     <label for="medida-select" class="form-label">Tipo de Medida</label>
                     <select class="form-select" id="medida-select">
-                        <option value="1">Kilowatts</option>
-                        <option value="2">Watts</option>
-                        <option value="3">Temperatura</option>
                     </select>
                 </div>
             </div>
@@ -56,6 +53,6 @@
 @endsection
 
 @section('javascript')
+    <script src="{{asset('js/servicios/lecturasService.js')}}"></script>
     <script src="{{asset('js/registrar_lectura.js')}}"></script>
-
 @endsection
