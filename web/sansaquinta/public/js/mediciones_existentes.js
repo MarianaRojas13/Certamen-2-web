@@ -39,6 +39,7 @@ const cargarTabla = (lecturas)=>{
         let tdHora=document.createElement("td");
         let tdMedidor=document.createElement("td");
         let tdValor = document.createElement("td");
+        let tdIcon = document.createElement("td");
         let tipo_medida = lecturas[i].tipo_medida;
         let agr;
         let valorT=lecturas[i].valor;
@@ -56,9 +57,11 @@ const cargarTabla = (lecturas)=>{
         }
 
         if (agr ==="C"&&valorT>60){
-            let a = document.createElement("i");
-            a.classList.add("fas", "fa-fire", "text-danger");
-            tdValor.innerText=lecturas[i].valor+" "+agr+" "+a.innerText;
+            let a= document.createElement("i");
+            a.classList.add("fas","fa-fire","text-danger","fa-1x");
+            tdValor.innerText=lecturas[i].valor+" "+agr+"  ";
+            tdValor.appendChild(a);
+            //"fas", "fa-fire", "text-danger";
         }else{
             tdValor.innerText=lecturas[i].valor+" "+agr;
         }
@@ -73,8 +76,6 @@ const cargarTabla = (lecturas)=>{
         botonEliminar.idLectura=lecturas[i].id;
         botonEliminar.addEventListener("click", eliminacion);
         tdAcciones.appendChild(botonEliminar);
-
-
 
         tr.appendChild(tdFecha);
         tr.appendChild(tdHora);
